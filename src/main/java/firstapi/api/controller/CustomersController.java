@@ -16,6 +16,7 @@ import firstapi.api.services.CustomerService;
 
 /**
  * asdasdasdasd
+ * @author miau
  */
 
 @RestController
@@ -25,7 +26,7 @@ public class CustomersController {
     @Autowired
     CustomerService customerService;
 
-    @GetMapping("/")
+    @GetMapping
     public ResponseEntity<Iterable<Customer>> findaAll(){
         return ResponseEntity.ok(customerService.findAll());
     }
